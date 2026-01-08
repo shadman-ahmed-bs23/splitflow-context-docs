@@ -18,7 +18,6 @@ Users can submit expenses for group approval.
   - Amount (required, positive number, max 2 decimal places)
   - Date-Time (required, defaults to current)
   - Description (optional, max 200 characters)
-  - Receipt attachment (optional, image file, max 5MB)
 - Submission behavior:
   - Admin expenses: Auto-approved, immediately affect Main Balance
   - Member expenses: Enter "Pending" state, require Admin approval
@@ -33,7 +32,6 @@ Users can submit expenses for group approval.
 - Pending expenses do not affect Main Balance
 - Only approved expenses are split among members
 - Expense cannot exceed Main Balance (warning shown, but allowed)
-- Receipt file types: JPG, PNG, PDF (max 5MB)
 
 ---
 
@@ -42,15 +40,12 @@ Users can submit expenses for group approval.
 - ✅ Member expense enters pending state
 - ✅ All Admins notified of pending expense
 - ✅ Expense form validates all inputs
-- ✅ Receipt upload works correctly
 - ✅ Status indicator shows correct state
 - ✅ Future date validation prevents submission
 
 ---
 
 ## Technical Notes
-- File upload: Secure storage (AWS S3 or similar)
-- Image processing: Thumbnail generation for receipts
 - Status tracking: Pending → Approved/Rejected state machine
 - Real-time: WebSocket notification to Admins for pending expenses
 
@@ -60,7 +55,6 @@ Users can submit expenses for group approval.
 - GRP-001: Group Creation
 - FIN-003: Expense Approval Workflow
 - FIN-004: Main Balance Calculation
-- File storage service
 
 ---
 

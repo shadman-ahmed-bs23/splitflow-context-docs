@@ -9,7 +9,7 @@
 ---
 
 ## Description
-Application must be fully functional and optimized for mobile devices.
+Application must be fully functional and optimized for mobile devices. On larger screens (e.g., desktop), the UI is constrained to a mobile-width viewport and centered horizontally.
 
 ---
 
@@ -26,6 +26,7 @@ Application must be fully functional and optimized for mobile devices.
   - Initial load < 3 seconds on 3G
   - Smooth scrolling (60fps)
   - Optimized images and assets
+  - Maximum content width on desktop equivalent to a mobile screen and centered horizontally
 
 ---
 
@@ -42,6 +43,7 @@ Application must be fully functional and optimized for mobile devices.
 - No feature degradation on smaller screens
 - Touch interactions must feel responsive
 - Performance targets must be met
+ - On desktop and larger screens, the main app shell should appear as a mobile-width column centered horizontally with neutral background gutters on the sides
 
 ---
 
@@ -53,6 +55,7 @@ Application must be fully functional and optimized for mobile devices.
 - ✅ Typography readable on all devices
 - ✅ Color contrast meets WCAG AA standards
 - ✅ Touch targets meet minimum size requirements
+ - ✅ On desktop, main app content is constrained to a mobile-width column and centered horizontally
 
 ---
 

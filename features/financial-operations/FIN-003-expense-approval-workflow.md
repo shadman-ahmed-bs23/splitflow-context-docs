@@ -18,10 +18,9 @@ Admins review and approve/reject pending member expenses.
 - Each pending expense displays:
   - Amount, date, description
   - Submitter name and timestamp
-  - Receipt image (if attached)
 - Actions available:
   - Approve: Expense added to ledger, Main Balance updated
-  - Reject: Expense removed, submitter notified with optional reason
+  - Reject: Expense removed, submitter notified with mandatory rejection reason
 - Approval triggers:
   - Expense split equally among all members
   - Individual balances updated
@@ -38,7 +37,7 @@ Admins review and approve/reject pending member expenses.
 - Any Admin can approve/reject (first-come basis)
 - Once approved/rejected, action cannot be undone
 - Approved expenses are immutable
-- Rejection reason optional but recommended
+- Rejection reason is mandatory and must be provided by the Admin
 - Expense split based on member count at time of approval
 
 ---
@@ -46,7 +45,7 @@ Admins review and approve/reject pending member expenses.
 ## Acceptance Criteria
 - ✅ Approval updates balances within 1 second
 - ✅ All members notified of approval
-- ✅ Rejection notifies submitter appropriately
+- ✅ Rejection notifies submitter with the provided reason
 - ✅ Pending list updates in real-time
 - ✅ Approved expenses cannot be modified
 - ✅ Expense split calculated correctly

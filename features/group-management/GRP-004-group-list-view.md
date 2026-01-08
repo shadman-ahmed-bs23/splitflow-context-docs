@@ -17,7 +17,6 @@ Home screen displays all user's groups in a WhatsApp-style list view.
 - List sorted by most recent activity (last expense/deposit)
 - Each list item displays:
   - Group name
-  - Main Balance (formatted with currency)
   - Last activity timestamp
   - Unread notification badge (if applicable)
 - Click/tap navigates to group detail view
@@ -51,7 +50,6 @@ Home screen displays all user's groups in a WhatsApp-style list view.
 - ✅ Pull-to-refresh updates list
 - ✅ Empty state shown when no groups
 - ✅ Unread notification badges accurate
-- ✅ Main Balance formatted correctly with currency
 
 ---
 

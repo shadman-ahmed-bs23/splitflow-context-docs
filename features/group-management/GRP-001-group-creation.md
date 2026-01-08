@@ -17,8 +17,7 @@ Any authenticated user can create a new group and automatically becomes the prim
 - Group creation form with:
   - Group name (required, max 50 characters)
   - Optional description (max 200 characters)
-  - Default currency selection
-  - Group visibility settings (private/public)
+  - Default currency selection (pre-filled with ৳ and non-editable in MVP)
 - Creator automatically assigned Admin role
 - Initial Main Balance set to $0.00
 - Group assigned unique identifier
@@ -28,9 +27,10 @@ Any authenticated user can create a new group and automatically becomes the prim
 ## Business Rules
 - User can create unlimited groups
 - Group name must be unique per user (can reuse names across different groups)
-- Group cannot be deleted if it has pending expenses
-- Currency defaults to user's preference or "USD"
-- Private groups are only visible to members
+- Groups can never be deleted; they can only be archived
+- Archived groups become read-only and hidden from default active list views
+- All groups are always private and only visible to members
+- Currency is fixed to Bangladeshi Taka (৳) for this phase
 
 ---
 

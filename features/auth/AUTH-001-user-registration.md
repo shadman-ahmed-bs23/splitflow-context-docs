@@ -9,14 +9,18 @@
 ---
 
 ## Description
-Users must be able to create an account to use SplitFlow.
+Users must be able to create an account to use SplitFlow using email and a one-time password (OTP), with no persistent password.
 
 ---
 
 ## Functional Requirements
-- Registration form with email and password
-- Email verification required before account activation
-- Password strength requirements (minimum 8 characters, 1 uppercase, 1 number)
+- Registration form with email only
+- On submit, system generates a one-time verification code (OTP) and sends it to the provided email
+- OTP length configurable (default: 6 digits)
+- OTP entry screen with:
+  - Email (pre-filled, read-only)
+  - OTP input
+- OTP verification required before account activation
 - Duplicate email prevention
 - Terms of service and privacy policy acceptance
 
@@ -24,26 +28,28 @@ Users must be able to create an account to use SplitFlow.
 
 ## Business Rules
 - Email must be unique across all users
-- Account remains inactive until email verification
-- Verification link expires after 24 hours
+- Account remains inactive until OTP verification
+- OTP expires after 10 minutes
+- Maximum OTP verification attempts per session (e.g., 5)
 - User must accept terms of service to proceed
 
 ---
 
 ## Acceptance Criteria
-- ✅ User can register with valid email and password
-- ✅ Verification email sent within 30 seconds
-- ✅ Account activated only after email verification
+- ✅ User can register with valid email
+- ✅ OTP email sent within 30 seconds
+- ✅ Account activated only after correct OTP verification
 - ✅ Invalid inputs show clear error messages
 - ✅ Duplicate email shows appropriate error
-- ✅ Password strength validation works correctly
+- ✅ Expired OTP is rejected with appropriate error
+- ✅ Exceeding OTP attempts locks verification for a cooldown period
 
 ---
 
 ## Technical Notes
 - Email validation: RFC 5322 compliant
-- Password hashing: bcrypt with cost factor 12
-- Verification token: Cryptographically secure random string
+- OTP generation: Cryptographically secure random numeric code
+- OTP storage: Short-lived server-side store keyed by email
 - Email service: SendGrid or AWS SES
 
 ---
