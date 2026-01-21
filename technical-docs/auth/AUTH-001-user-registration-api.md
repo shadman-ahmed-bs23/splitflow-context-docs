@@ -25,7 +25,7 @@
 {
   "data": {
     "message": "OTP sent to your email",
-    "expires_in": 600,  // OTP expiration time in seconds (10 minutes)
+    "expires_in": 300,  // OTP expiration time in seconds (5 minutes)
     "email": "user@example.com"
   },
   "meta": {
@@ -126,7 +126,7 @@ CREATE TABLE otp_requests (
 1. Validate email format (RFC 5322)
 2. Check email uniqueness
 3. Generate cryptographically secure 6-digit OTP
-4. Store OTP with expiration (10 minutes)
+4. Store OTP with expiration (5 minutes)
 5. Send OTP via email service
 6. Rate limit: 3 requests per email per 15 minutes
 7. On verification: Create user, mark email as verified, issue access token
@@ -232,7 +232,7 @@ function generateOtp(): string
 
 1. **OTP Storage:** Encrypted in database, never logged
 2. **Rate Limiting:** Per-email and per-IP limits
-3. **OTP Expiration:** 10 minutes hard limit
+3. **OTP Expiration:** 5 minutes hard limit
 4. **Attempt Limits:** Lock after 5 failed attempts
 5. **Email Validation:** Server-side RFC 5322 validation
 6. **Token Security:** Passport tokens, HTTP-only cookies preferred

@@ -24,7 +24,7 @@
 {
   "data": {
     "message": "OTP sent to your email",
-    "expires_in": 600,  // OTP expiration time in seconds (10 minutes)
+    "expires_in": 300,  // OTP expiration time in seconds (5 minutes)
     "email": "user@example.com"
   },
   "meta": {
@@ -128,7 +128,7 @@ Authorization: Bearer {access_token}
 
 **Key Logic:**
 1. Validate email exists and is verified
-2. Generate login OTP (6 digits, 10 min expiry)
+2. Generate login OTP (6 digits, 5 min expiry)
 3. Store OTP with attempt tracking
 4. Send OTP via email
 5. On verification: Update last_login_at, issue Passport token

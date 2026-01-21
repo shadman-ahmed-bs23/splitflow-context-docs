@@ -32,7 +32,7 @@ Registered users can securely log into their accounts using email and a one-time
 - Only verified accounts can log in
 - Failed login attempts tracked per IP and email
 - Session tokens expire after 7 days
-- OTP expires after 10 minutes
+- OTP expires after 5 minutes
 - Concurrent sessions allowed (no limit)
 
 ---

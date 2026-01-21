@@ -29,7 +29,7 @@ Users must be able to create an account to use SplitFlow using email and a one-t
 ## Business Rules
 - Email must be unique across all users
 - Account remains inactive until OTP verification
-- OTP expires after 10 minutes
+- OTP expires after 5 minutes
 - Maximum OTP verification attempts per session (e.g., 5)
 - User must accept terms of service to proceed
 
