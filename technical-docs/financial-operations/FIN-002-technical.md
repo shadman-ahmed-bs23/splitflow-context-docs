@@ -20,7 +20,7 @@ Authorization: Bearer {access_token}
 **Request Body:**
 ```json
 {
-  "amount": "500.00",
+  "amount": 500.00,
   "date_time": "2026-01-15T10:30:00Z",
   "description": "Lunch at restaurant"
 }
@@ -33,7 +33,7 @@ Authorization: Bearer {access_token}
     "id": "uuid",
     "group_id": "uuid",
     "type": "expense",
-    "amount": "500.00",
+    "amount": 500.00,
     "date_time": "2026-01-15T10:30:00Z",
     "description": "Lunch at restaurant",
     "submitted_by": {
@@ -155,6 +155,29 @@ if ($user->isAdminOf($group)) {
 | `EXP003` | 422 | Date cannot be in the future |
 | `EXP004` | 422 | Invalid amount format |
 | `EXP005` | 404 | Group not found |
+
+### 5.2 Error Response Format
+```json
+{
+  "error": {
+    "message": "Validation failed",
+    "code": "EXP002",
+    "fields": [
+      {
+        "field": "amount",
+        "message": "Amount must be positive"
+      },
+      {
+        "field": "date_time",
+        "message": "Date cannot be in the future"
+      }
+    ]
+  },
+  "meta": {
+    "request_id": "uuid"
+  }
+}
+```
 
 ---
 

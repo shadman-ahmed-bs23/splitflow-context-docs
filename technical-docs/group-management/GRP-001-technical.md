@@ -33,7 +33,7 @@ Authorization: Bearer {access_token}
     "name": "Weekend Trip",
     "description": "Trip to Cox's Bazar",
     "currency": "BDT",
-    "main_balance": "0.00",
+    "main_balance": 0.00,
     "is_archived": false,
     "created_by": "uuid",
     "created_at": "2026-01-15T10:30:00Z",
@@ -75,7 +75,7 @@ Authorization: Bearer {access_token}
     "name": "Updated Group Name",
     "description": "Updated description",
     "currency": "BDT",
-    "main_balance": "0.00",
+    "main_balance": 0.00,
     "is_archived": false,
     "updated_at": "2026-01-15T11:00:00Z"
   },
@@ -240,13 +240,16 @@ Rule::unique('groups')->where(function ($query) use ($user) {
 ### 5.2 Error Response Format
 ```json
 {
-  "errors": [
-    {
-      "code": "GRP003",
-      "message": "Group name already exists for this user",
-      "field": "name"
-    }
-  ],
+  "error": {
+    "message": "Validation failed",
+    "code": "GRP003",
+    "fields": [
+      {
+        "field": "name",
+        "message": "Group name already exists for this user"
+      }
+    ]
+  },
   "meta": {
     "request_id": "uuid"
   }

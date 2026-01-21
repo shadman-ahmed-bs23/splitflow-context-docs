@@ -24,7 +24,7 @@
 {
   "data": {
     "message": "OTP sent to your email",
-    "expires_in": 600,
+    "expires_in": 600,  // OTP expiration time in seconds (10 minutes)
     "email": "user@example.com"
   },
   "meta": {
@@ -63,7 +63,7 @@
     },
     "access_token": "eyJ0eXAiOiJKV1QiLCJhbGc...",
     "token_type": "Bearer",
-    "expires_in": 604800
+    "expires_in": 604800000  // Token expiration time in milliseconds (7 days)
   },
   "meta": {
     "request_id": "uuid"
@@ -208,13 +208,16 @@ Authorization: Bearer {access_token}
 ### 5.2 Error Response Format
 ```json
 {
-  "errors": [
-    {
-      "code": "LOGIN002",
-      "message": "Email not registered",
-      "field": "email"
-    }
-  ],
+  "error": {
+    "message": "Authentication failed",
+    "code": "LOGIN002",
+    "fields": [
+      {
+        "field": "email",
+        "message": "Email not registered"
+      }
+    ]
+  },
   "meta": {
     "request_id": "uuid"
   }

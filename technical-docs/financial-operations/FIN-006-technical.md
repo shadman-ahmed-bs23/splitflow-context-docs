@@ -22,33 +22,33 @@ Authorization: Bearer {access_token}
 {
   "data": {
     "group_id": "uuid",
-    "total_settlement_amount": "500.00",
+    "total_settlement_amount": 500.00,
     "recommendations": [
       {
         "from_user": {
           "id": "uuid",
           "email": "user1@example.com",
-          "balance": "-200.00"
+          "balance": -200.00
         },
         "to_user": {
           "id": "uuid",
           "email": "user2@example.com",
-          "balance": "300.00"
+          "balance": 300.00
         },
-        "amount": "200.00"
+        "amount": 200.00
       },
       {
         "from_user": {
           "id": "uuid",
           "email": "user1@example.com",
-          "balance": "-200.00"
+          "balance": -200.00
         },
         "to_user": {
           "id": "uuid",
           "email": "user3@example.com",
-          "balance": "200.00"
+          "balance": 200.00
         },
-        "amount": "100.00"
+        "amount": 100.00
       }
     ],
     "summary": {
@@ -148,6 +148,25 @@ function minimizeTransactions(array $balances): array
 |------|-------------|---------|
 | `SET001` | 404 | Group not found |
 | `SET002` | 403 | Not a member |
+
+### 5.2 Error Response Format
+```json
+{
+  "error": {
+    "message": "Access denied",
+    "code": "SET002",
+    "fields": [
+      {
+        "field": "authorization",
+        "message": "Not a member"
+      }
+    ]
+  },
+  "meta": {
+    "request_id": "uuid"
+  }
+}
+```
 
 ---
 

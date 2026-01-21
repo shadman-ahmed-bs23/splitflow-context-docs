@@ -19,8 +19,8 @@ Authorization: Bearer {access_token}
 
 **Query Parameters:**
 - `search` (optional) - Search by group name
-- `page` (optional) - Page number (default: 1)
-- `per_page` (optional) - Items per page (default: 20, max: 100)
+- `skip` (optional) - Number of records to skip (default: 0)
+- `limit` (optional) - Maximum number of records to return (default: 20, max: 100)
 
 **Response (200 OK):**
 ```json
@@ -36,10 +36,10 @@ Authorization: Bearer {access_token}
   ],
   "meta": {
     "pagination": {
-      "current_page": 1,
-      "per_page": 20,
+      "skip": 0,
+      "limit": 20,
       "total": 5,
-      "last_page": 1
+      "has_more": false
     },
     "request_id": "uuid"
   }
@@ -67,7 +67,7 @@ Authorization: Bearer {access_token}
     "name": "Weekend Trip",
     "description": "Trip to Cox's Bazar",
     "currency": "BDT",
-    "main_balance": "1500.00",
+    "main_balance": 1500.00,
     "unread_count": 0,
     "last_activity_at": "2026-01-15T10:30:00Z",
     "created_at": "2026-01-10T08:00:00Z"
@@ -147,7 +147,7 @@ Group::whereHas('members', function ($query) use ($user) {
     });
 }])
 ->orderBy('last_activity_at', 'desc')
-->paginate($perPage);
+->skip($skip)->take($limit)->get();
 ```
 
 ---
@@ -218,6 +218,25 @@ Updates `user_group_activity.last_seen_at` to current timestamp.
 |------|-------------|---------|
 | `LIST001` | 401 | Unauthorized |
 | `LIST002` | 404 | Group not found |
+
+### 5.2 Error Response Format
+```json
+{
+  "error": {
+    "message": "Unauthorized",
+    "code": "LIST001",
+    "fields": [
+      {
+        "field": "authorization",
+        "message": "Invalid or expired token"
+      }
+    ]
+  },
+  "meta": {
+    "request_id": "uuid"
+  }
+}
+```
 
 ---
 

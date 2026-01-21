@@ -20,7 +20,7 @@ Authorization: Bearer {access_token}
 **Request Body:**
 ```json
 {
-  "amount": "1500.00",
+  "amount": 1500.00,
   "date_time": "2026-01-15T10:30:00Z",
   "description": "Initial group fund"
 }
@@ -33,7 +33,7 @@ Authorization: Bearer {access_token}
     "id": "uuid",
     "group_id": "uuid",
     "type": "deposit",
-    "amount": "1500.00",
+    "amount": 1500.00,
     "date_time": "2026-01-15T10:30:00Z",
     "description": "Initial group fund",
     "submitted_by": {
@@ -41,7 +41,7 @@ Authorization: Bearer {access_token}
       "email": "admin@example.com"
     },
     "status": "approved",
-    "main_balance": "1500.00",
+    "main_balance": 1500.00,
     "created_at": "2026-01-15T10:30:00Z"
   },
   "meta": {
@@ -179,6 +179,29 @@ DB::transaction(function () use ($group, $amount) {
 | `DEP003` | 422 | Date cannot be in the future |
 | `DEP004` | 400 | System limit exceeded (999,999.99) |
 | `DEP005` | 422 | Invalid amount format |
+
+### 5.2 Error Response Format
+```json
+{
+  "error": {
+    "message": "Validation failed",
+    "code": "DEP002",
+    "fields": [
+      {
+        "field": "amount",
+        "message": "Amount must be positive"
+      },
+      {
+        "field": "date_time",
+        "message": "Date cannot be in the future"
+      }
+    ]
+  },
+  "meta": {
+    "request_id": "uuid"
+  }
+}
+```
 
 ---
 

@@ -23,33 +23,33 @@ Authorization: Bearer {access_token}
   "data": {
     "user_id": "uuid",
     "group_id": "uuid",
-    "current_balance": "250.00",
+    "current_balance": 250.00,
     "currency": "BDT",
     "transaction_history": [
       {
         "id": "uuid",
         "type": "deposit",
-        "amount": "500.00",
+        "amount": 500.00,
         "date_time": "2026-01-10T10:00:00Z",
         "description": "Initial deposit"
       },
       {
         "id": "uuid",
         "type": "expense_share",
-        "amount": "-125.00",
+        "amount": -125.00,
         "date_time": "2026-01-12T14:00:00Z",
         "description": "Lunch at restaurant"
       }
     ],
     "balance_over_time": [
-      {"date": "2026-01-10", "balance": "500.00"},
-      {"date": "2026-01-12", "balance": "375.00"},
-      {"date": "2026-01-15", "balance": "250.00"}
+      {"date": "2026-01-10", "balance": 500.00},
+      {"date": "2026-01-12", "balance": 375.00},
+      {"date": "2026-01-15", "balance": 250.00}
     ],
     "breakdown": {
-      "total_deposits": "500.00",
-      "total_expense_shares": "250.00",
-      "net_balance": "250.00"
+      "total_deposits": 500.00,
+      "total_expense_shares": 250.00,
+      "net_balance": 250.00
     }
   },
   "meta": {
@@ -160,6 +160,25 @@ function getBalanceOverTime(User $user, Group $group): array
 |------|-------------|---------|
 | `DASH001` | 404 | Group not found |
 | `DASH002` | 403 | Not a member |
+
+### 5.2 Error Response Format
+```json
+{
+  "error": {
+    "message": "Access denied",
+    "code": "DASH002",
+    "fields": [
+      {
+        "field": "authorization",
+        "message": "Not a member"
+      }
+    ]
+  },
+  "meta": {
+    "request_id": "uuid"
+  }
+}
+```
 
 ---
 

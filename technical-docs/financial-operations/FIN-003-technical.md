@@ -23,7 +23,7 @@ Authorization: Bearer {access_token}
   "data": [
     {
       "id": "uuid",
-      "amount": "500.00",
+      "amount": 500.00,
       "date_time": "2026-01-15T10:30:00Z",
       "description": "Lunch at restaurant",
       "submitted_by": {
@@ -60,11 +60,11 @@ Authorization: Bearer {access_token}
       "email": "admin@example.com"
     },
     "approved_at": "2026-01-15T11:00:00Z",
-    "main_balance": "1000.00",
+    "main_balance": 1000.00,
     "splits": [
       {
         "user_id": "uuid",
-        "amount": "125.00"
+        "amount": 125.00
       }
     ]
   },
@@ -244,6 +244,25 @@ DB::transaction(function () use ($group, $expense) {
 | `APP003` | 409 | Expense already approved/rejected |
 | `APP004` | 422 | Rejection reason is required |
 | `APP005` | 422 | Expense is not pending |
+
+### 5.2 Error Response Format
+```json
+{
+  "error": {
+    "message": "Validation failed",
+    "code": "APP004",
+    "fields": [
+      {
+        "field": "rejection_reason",
+        "message": "Rejection reason is required"
+      }
+    ]
+  },
+  "meta": {
+    "request_id": "uuid"
+  }
+}
+```
 
 ---
 

@@ -23,13 +23,13 @@ Authorization: Bearer {access_token}
   "data": {
     "user_id": "uuid",
     "group_id": "uuid",
-    "individual_balance": "250.00",
+    "individual_balance": 250.00,
     "currency": "BDT",
     "formatted_balance": "৳250.00",
     "breakdown": {
-      "total_deposits": "500.00",
-      "total_expense_shares": "250.00",
-      "net_balance": "250.00"
+      "total_deposits": 500.00,
+      "total_expense_shares": 250.00,
+      "net_balance": 250.00
     },
     "last_updated": "2026-01-15T10:30:00Z"
   },
@@ -144,6 +144,25 @@ foreach ($splits as $split) {
 |------|-------------|---------|
 | `IBAL001` | 404 | Group not found |
 | `IBAL002` | 403 | Not a member |
+
+### 5.2 Error Response Format
+```json
+{
+  "error": {
+    "message": "Access denied",
+    "code": "IBAL002",
+    "fields": [
+      {
+        "field": "authorization",
+        "message": "Not a member"
+      }
+    ]
+  },
+  "meta": {
+    "request_id": "uuid"
+  }
+}
+```
 
 ---
 

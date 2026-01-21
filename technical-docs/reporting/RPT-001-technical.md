@@ -38,16 +38,16 @@ Authorization: Bearer {access_token}
       "end_date": "2026-01-31"
     },
     "summary": {
-      "total_deposits": "5000.00",
-      "total_expenses": "3500.00",
-      "net_change": "1500.00",
+      "total_deposits": 5000.00,
+      "total_expenses": 3500.00,
+      "net_change": 1500.00,
       "currency": "BDT"
     },
     "transactions": [
       {
         "id": "uuid",
         "type": "deposit",
-        "amount": "1500.00",
+        "amount": 1500.00,
         "date_time": "2026-01-15T10:30:00Z",
         "description": "Initial fund",
         "submitted_by": "uuid"
@@ -55,11 +55,11 @@ Authorization: Bearer {access_token}
     ],
     "charts": {
       "daily_spending": [
-        {"date": "2026-01-01", "amount": "500.00"},
-        {"date": "2026-01-02", "amount": "300.00"}
+        {"date": "2026-01-01", "amount": 500.00},
+        {"date": "2026-01-02", "amount": 300.00}
       ],
       "by_member": [
-        {"member_id": "uuid", "total": "1000.00"}
+        {"member_id": "uuid", "total": 1000.00}
       ]
     }
   },
@@ -187,6 +187,25 @@ function generateReport(Group $group, array $filters): array
 | `RPT002` | 422 | Date range exceeds 1 year |
 | `RPT003` | 422 | Invalid date range |
 | `RPT004` | 404 | Group not found |
+
+### 5.2 Error Response Format
+```json
+{
+  "error": {
+    "message": "Validation failed",
+    "code": "RPT002",
+    "fields": [
+      {
+        "field": "end_date",
+        "message": "Date range exceeds 1 year"
+      }
+    ]
+  },
+  "meta": {
+    "request_id": "uuid"
+  }
+}
+```
 
 ---
 

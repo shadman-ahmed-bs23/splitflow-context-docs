@@ -237,6 +237,25 @@ Runs daily to mark expired invitations.
 | `INV006` | 410 | Invitation expired |
 | `INV007` | 410 | Invitation already used |
 
+### 5.2 Error Response Format
+```json
+{
+  "error": {
+    "message": "Invitation failed",
+    "code": "INV003",
+    "fields": [
+      {
+        "field": "email",
+        "message": "User already a member"
+      }
+    ]
+  },
+  "meta": {
+    "request_id": "uuid"
+  }
+}
+```
+
 ---
 
 ## 6. Security Considerations

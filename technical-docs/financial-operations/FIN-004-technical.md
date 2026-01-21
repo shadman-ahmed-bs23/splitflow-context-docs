@@ -22,7 +22,7 @@ Authorization: Bearer {access_token}
 {
   "data": {
     "group_id": "uuid",
-    "main_balance": "1500.00",
+    "main_balance": 1500.00,
     "currency": "BDT",
     "formatted_balance": "৳1,500.00",
     "last_updated": "2026-01-15T10:30:00Z"
@@ -137,6 +137,20 @@ if ($calculatedBalance != $group->main_balance) {
 |------|-------------|---------|
 | `BAL001` | 404 | Group not found |
 | `BAL002` | 403 | Not a member |
+
+### 5.2 Error Response Format
+```json
+{
+  "error": {
+    "message": "Group not found",
+    "code": "BAL001",
+    "fields": []
+  },
+  "meta": {
+    "request_id": "uuid"
+  }
+}
+```
 
 ---
 

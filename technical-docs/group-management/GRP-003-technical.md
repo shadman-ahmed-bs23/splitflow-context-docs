@@ -90,7 +90,7 @@ Authorization: Bearer {access_token}
         "email": "user@example.com"
       },
       "role": "admin",
-      "individual_balance": "100.00",
+      "individual_balance": 100.00,
       "joined_at": "2026-01-15T10:00:00Z"
     }
   ],
@@ -224,6 +224,25 @@ AuditLog::create([
 | `ROLE003` | 422 | User is already an admin |
 | `ROLE004` | 422 | Cannot revoke last admin |
 | `ROLE005` | 422 | User is not an admin |
+
+### 5.2 Error Response Format
+```json
+{
+  "error": {
+    "message": "Role change failed",
+    "code": "ROLE004",
+    "fields": [
+      {
+        "field": "role",
+        "message": "Cannot revoke last admin"
+      }
+    ]
+  },
+  "meta": {
+    "request_id": "uuid"
+  }
+}
+```
 
 ---
 
