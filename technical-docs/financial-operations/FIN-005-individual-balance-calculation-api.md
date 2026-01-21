@@ -200,6 +200,6 @@ foreach ($splits as $split) {
 
 ## 9. Related Documentation
 
-- [FIN-001 Technical Spec](./FIN-001-technical.md) - Deposits
-- [FIN-003 Technical Spec](./FIN-003-technical.md) - Approvals
-- [FIN-006 Technical Spec](./FIN-006-technical.md) - Settlement
+- [FIN-001 Technical Spec](./FIN-001-deposit-submission-api.md) - Deposits
+- [FIN-003 Technical Spec](./FIN-003-expense-approval-api.md) - Approvals
+- [FIN-006 Technical Spec](./FIN-006-settlement-calculation-api.md) - Settlement

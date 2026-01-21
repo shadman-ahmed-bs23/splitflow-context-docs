@@ -238,5 +238,5 @@ setInterval(() => {
 
 ## 10. Related Documentation
 
-- [GRP-004 Technical Spec](../group-management/GRP-004-technical.md) - Group List View
-- [UI-002 Technical Spec](../ui/UI-002-technical.md) - Real-Time Updates
+- [GRP-004 Technical Spec](../group-management/GRP-004-group-list-api.md) - Group List View
+- [UI-002 Technical Spec](../ui/UI-002-real-time-updates.md) - Real-Time Updates

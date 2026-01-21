@@ -270,6 +270,6 @@ Authorization: Bearer {access_token}
 
 ## 9. Related Documentation
 
-- [AUTH-001 Technical Spec](./AUTH-001-technical.md) - Registration flow
+- [AUTH-001 Technical Spec](./AUTH-001-user-registration-api.md) - Registration flow
 - Laravel Passport Documentation
 - API Authentication Guide

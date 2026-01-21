@@ -229,6 +229,6 @@ if ($user->isAdminOf($group)) {
 
 ## 10. Related Documentation
 
-- [FIN-001 Technical Spec](./FIN-001-technical.md) - Deposit Submission
-- [FIN-003 Technical Spec](./FIN-003-technical.md) - Expense Approval
-- [FIN-004 Technical Spec](./FIN-004-technical.md) - Main Balance Calculation
+- [FIN-001 Technical Spec](./FIN-001-deposit-submission-api.md) - Deposit Submission
+- [FIN-003 Technical Spec](./FIN-003-expense-approval-api.md) - Expense Approval
+- [FIN-004 Technical Spec](./FIN-004-main-balance-calculation-api.md) - Main Balance Calculation

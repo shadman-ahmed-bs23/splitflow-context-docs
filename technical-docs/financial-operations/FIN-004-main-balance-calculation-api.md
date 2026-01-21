@@ -193,6 +193,6 @@ if ($calculatedBalance != $group->main_balance) {
 
 ## 9. Related Documentation
 
-- [FIN-001 Technical Spec](./FIN-001-technical.md) - Deposits
-- [FIN-003 Technical Spec](./FIN-003-technical.md) - Approvals
-- [UI-002 Technical Spec](../ui/UI-002-technical.md) - Real-time Updates
+- [FIN-001 Technical Spec](./FIN-001-deposit-submission-api.md) - Deposits
+- [FIN-003 Technical Spec](./FIN-003-expense-approval-api.md) - Approvals
+- [UI-002 Technical Spec](../ui/UI-002-real-time-updates.md) - Real-time Updates

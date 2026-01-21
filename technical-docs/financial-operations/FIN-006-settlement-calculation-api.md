@@ -201,5 +201,5 @@ function minimizeTransactions(array $balances): array
 
 ## 9. Related Documentation
 
-- [FIN-005 Technical Spec](./FIN-005-technical.md) - Individual Balance
-- [FIN-004 Technical Spec](./FIN-004-technical.md) - Main Balance
+- [FIN-005 Technical Spec](./FIN-005-individual-balance-calculation-api.md) - Individual Balance
+- [FIN-004 Technical Spec](./FIN-004-main-balance-calculation-api.md) - Main Balance

@@ -308,5 +308,5 @@ const useReconnection = () => {
 
 ## 9. Related Documentation
 
-- [NOTIF-001 Technical Spec](../notifications/NOTIF-001-technical.md) - Notifications
-- [UI-001 Technical Spec](./UI-001-technical.md) - Mobile Design
+- [NOTIF-001 Technical Spec](../notifications/NOTIF-001-unread-activity-counts-api.md) - Notifications
+- [UI-001 Technical Spec](./UI-001-mobile-responsive-design.md) - Mobile Design

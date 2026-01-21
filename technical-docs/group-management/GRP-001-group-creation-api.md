@@ -311,6 +311,6 @@ Rule::unique('groups')->where(function ($query) use ($user) {
 
 ## 10. Related Documentation
 
-- [GRP-002 Technical Spec](./GRP-002-technical.md) - Member Invitation
-- [GRP-003 Technical Spec](./GRP-003-technical.md) - Admin Role Management
-- [GRP-004 Technical Spec](./GRP-004-technical.md) - Group List View
+- [GRP-002 Technical Spec](./GRP-002-member-invitation-api.md) - Member Invitation
+- [GRP-003 Technical Spec](./GRP-003-admin-role-management-api.md) - Admin Role Management
+- [GRP-004 Technical Spec](./GRP-004-group-list-api.md) - Group List View

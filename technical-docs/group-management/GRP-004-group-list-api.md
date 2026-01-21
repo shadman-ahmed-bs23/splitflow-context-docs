@@ -282,6 +282,6 @@ Updates `user_group_activity.last_seen_at` to current timestamp.
 
 ## 10. Related Documentation
 
-- [GRP-001 Technical Spec](./GRP-001-technical.md) - Group Creation
-- [FIN-001 Technical Spec](../financial-operations/FIN-001-technical.md) - Deposits
-- [NOTIF-001 Technical Spec](../notifications/NOTIF-001-technical.md) - Notifications
+- [GRP-001 Technical Spec](./GRP-001-group-creation-api.md) - Group Creation
+- [FIN-001 Technical Spec](../financial-operations/FIN-001-deposit-submission-api.md) - Deposits
+- [NOTIF-001 Technical Spec](../notifications/NOTIF-001-unread-activity-counts-api.md) - Notifications

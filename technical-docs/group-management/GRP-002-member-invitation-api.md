@@ -323,6 +323,6 @@ Runs daily to mark expired invitations.
 
 ## 11. Related Documentation
 
-- [GRP-001 Technical Spec](./GRP-001-technical.md) - Group Creation
-- [GRP-003 Technical Spec](./GRP-003-technical.md) - Admin Role Management
-- [NOTIF-001 Technical Spec](../notifications/NOTIF-001-technical.md) - Notifications
+- [GRP-001 Technical Spec](./GRP-001-group-creation-api.md) - Group Creation
+- [GRP-003 Technical Spec](./GRP-003-admin-role-management-api.md) - Admin Role Management
+- [NOTIF-001 Technical Spec](../notifications/NOTIF-001-unread-activity-counts-api.md) - Notifications

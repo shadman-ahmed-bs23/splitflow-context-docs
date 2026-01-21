@@ -35,8 +35,8 @@ This index tracks all technical documentation for each feature, providing quick 
 
 | Feature ID | Technical Doc | API Endpoints | Database Tables | Key Services |
 |------------|---------------|---------------|-----------------|--------------|
-| AUTH-001 | [AUTH-001-technical.md](./auth/AUTH-001-technical.md) | 2 | users, otp_requests | RegistrationService |
-| AUTH-002 | [AUTH-002-technical.md](./auth/AUTH-002-technical.md) | 3 | users, otp_requests, oauth_* | LoginService |
+| AUTH-001 | [AUTH-001-user-registration-api.md](./auth/AUTH-001-user-registration-api.md) | 2 | users, otp_requests | RegistrationService |
+| AUTH-002 | [AUTH-002-user-login-api.md](./auth/AUTH-002-user-login-api.md) | 3 | users, otp_requests, oauth_* | LoginService |
 
 ---
 
@@ -44,10 +44,10 @@ This index tracks all technical documentation for each feature, providing quick 
 
 | Feature ID | Technical Doc | API Endpoints | Database Tables | Key Services |
 |------------|---------------|---------------|-----------------|--------------|
-| GRP-001 | [GRP-001-technical.md](./group-management/GRP-001-technical.md) | 3 | groups, group_members | GroupService |
-| GRP-002 | [GRP-002-technical.md](./group-management/GRP-002-technical.md) | 3 | group_invitations, group_members | InvitationService |
-| GRP-003 | [GRP-003-technical.md](./group-management/GRP-003-technical.md) | 3 | group_members, audit_logs | RoleManagementService |
-| GRP-004 | [GRP-004-technical.md](./group-management/GRP-004-technical.md) | 2 | groups, group_members, user_group_activity | GroupListService |
+| GRP-001 | [GRP-001-group-creation-api.md](./group-management/GRP-001-group-creation-api.md) | 3 | groups, group_members | GroupService |
+| GRP-002 | [GRP-002-member-invitation-api.md](./group-management/GRP-002-member-invitation-api.md) | 3 | group_invitations, group_members | InvitationService |
+| GRP-003 | [GRP-003-admin-role-management-api.md](./group-management/GRP-003-admin-role-management-api.md) | 3 | group_members, audit_logs | RoleManagementService |
+| GRP-004 | [GRP-004-group-list-api.md](./group-management/GRP-004-group-list-api.md) | 2 | groups, group_members, user_group_activity | GroupListService |
 
 ---
 
@@ -55,12 +55,12 @@ This index tracks all technical documentation for each feature, providing quick 
 
 | Feature ID | Technical Doc | API Endpoints | Database Tables | Key Services |
 |------------|---------------|---------------|-----------------|--------------|
-| FIN-001 | [FIN-001-technical.md](./financial-operations/FIN-001-technical.md) | 1 | transactions, groups | DepositService |
-| FIN-002 | [FIN-002-technical.md](./financial-operations/FIN-002-technical.md) | 1 | transactions, expense_splits | ExpenseService |
-| FIN-003 | [FIN-003-technical.md](./financial-operations/FIN-003-technical.md) | 3 | transactions, expense_splits, group_members | ExpenseApprovalService |
-| FIN-004 | [FIN-004-technical.md](./financial-operations/FIN-004-technical.md) | 1 | groups, transactions | BalanceService |
-| FIN-005 | [FIN-005-technical.md](./financial-operations/FIN-005-technical.md) | 1 | group_members, transactions, expense_splits | IndividualBalanceService |
-| FIN-006 | [FIN-006-technical.md](./financial-operations/FIN-006-technical.md) | 1 | group_members | SettlementService |
+| FIN-001 | [FIN-001-deposit-submission-api.md](./financial-operations/FIN-001-deposit-submission-api.md) | 1 | transactions, groups | DepositService |
+| FIN-002 | [FIN-002-expense-submission-api.md](./financial-operations/FIN-002-expense-submission-api.md) | 1 | transactions, expense_splits | ExpenseService |
+| FIN-003 | [FIN-003-expense-approval-api.md](./financial-operations/FIN-003-expense-approval-api.md) | 3 | transactions, expense_splits, group_members | ExpenseApprovalService |
+| FIN-004 | [FIN-004-main-balance-calculation-api.md](./financial-operations/FIN-004-main-balance-calculation-api.md) | 1 | groups, transactions | BalanceService |
+| FIN-005 | [FIN-005-individual-balance-calculation-api.md](./financial-operations/FIN-005-individual-balance-calculation-api.md) | 1 | group_members, transactions, expense_splits | IndividualBalanceService |
+| FIN-006 | [FIN-006-settlement-calculation-api.md](./financial-operations/FIN-006-settlement-calculation-api.md) | 1 | group_members | SettlementService |
 
 ---
 
@@ -68,7 +68,7 @@ This index tracks all technical documentation for each feature, providing quick 
 
 | Feature ID | Technical Doc | API Endpoints | Database Tables | Key Services/Composables |
 |------------|---------------|---------------|-----------------|--------------------------|
-| NOTIF-001 | [NOTIF-001-technical.md](./notifications/NOTIF-001-technical.md) | 2 | user_group_activity, groups | UnreadCountService, useRealtime |
+| NOTIF-001 | [NOTIF-001-unread-activity-counts-api.md](./notifications/NOTIF-001-unread-activity-counts-api.md) | 2 | user_group_activity, groups | UnreadCountService, useRealtime |
 
 ---
 
@@ -76,8 +76,8 @@ This index tracks all technical documentation for each feature, providing quick 
 
 | Feature ID | Technical Doc | API Endpoints | Database Tables | Key Services |
 |------------|---------------|---------------|-----------------|--------------|
-| RPT-001 | [RPT-001-technical.md](./reporting/RPT-001-technical.md) | 2 | transactions, expense_splits | ReportService |
-| RPT-002 | [RPT-002-technical.md](./reporting/RPT-002-technical.md) | 1 | transactions, expense_splits | PersonalDashboardService |
+| RPT-001 | [RPT-001-spending-reports-api.md](./reporting/RPT-001-spending-reports-api.md) | 2 | transactions, expense_splits | ReportService |
+| RPT-002 | [RPT-002-individual-balance-tracking-api.md](./reporting/RPT-002-individual-balance-tracking-api.md) | 1 | transactions, expense_splits | PersonalDashboardService |
 
 ---
 
@@ -85,8 +85,8 @@ This index tracks all technical documentation for each feature, providing quick 
 
 | Feature ID | Technical Doc | Frontend Files | Key Composables/Components |
 |------------|---------------|----------------|----------------------------|
-| UI-001 | [UI-001-technical.md](./ui/UI-001-technical.md) | layouts, components, styles | Layout components, responsive utilities |
-| UI-002 | [UI-002-technical.md](./ui/UI-002-technical.md) | plugins, composables | useRealtime, useGroupBalance, useUnreadCounts |
+| UI-001 | [UI-001-mobile-responsive-design.md](./ui/UI-001-mobile-responsive-design.md) | layouts, components, styles | Layout components, responsive utilities |
+| UI-002 | [UI-002-real-time-updates.md](./ui/UI-002-real-time-updates.md) | plugins, composables | useRealtime, useGroupBalance, useUnreadCounts |
 
 ---
 

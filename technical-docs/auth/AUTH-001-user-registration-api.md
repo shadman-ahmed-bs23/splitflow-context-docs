@@ -272,6 +272,6 @@ function generateOtp(): string
 
 ## 9. Related Documentation
 
-- [AUTH-002 Technical Spec](./AUTH-002-technical.md) - Login flow
+- [AUTH-002 Technical Spec](./AUTH-002-user-login-api.md) - Login flow
 - Laravel Passport Documentation
 - Email Service Integration Guide

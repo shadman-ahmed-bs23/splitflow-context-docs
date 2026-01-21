@@ -294,6 +294,6 @@ AuditLog::create([
 
 ## 10. Related Documentation
 
-- [GRP-001 Technical Spec](./GRP-001-technical.md) - Group Creation
-- [GRP-002 Technical Spec](./GRP-002-technical.md) - Member Invitation
-- [NOTIF-001 Technical Spec](../notifications/NOTIF-001-technical.md) - Notifications
+- [GRP-001 Technical Spec](./GRP-001-group-creation-api.md) - Group Creation
+- [GRP-002 Technical Spec](./GRP-002-member-invitation-api.md) - Member Invitation
+- [NOTIF-001 Technical Spec](../notifications/NOTIF-001-unread-activity-counts-api.md) - Notifications

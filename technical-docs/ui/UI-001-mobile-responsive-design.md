@@ -222,5 +222,5 @@ h2 {
 
 ## 8. Related Documentation
 
-- [UI-002 Technical Spec](./UI-002-technical.md) - Real-Time Updates
+- [UI-002 Technical Spec](./UI-002-real-time-updates.md) - Real-Time Updates
 - Frontend Architecture Guide

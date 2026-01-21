@@ -260,6 +260,6 @@ DB::transaction(function () use ($group, $amount) {
 
 ## 10. Related Documentation
 
-- [FIN-002 Technical Spec](./FIN-002-technical.md) - Expense Submission
-- [FIN-004 Technical Spec](./FIN-004-technical.md) - Main Balance Calculation
-- [FIN-005 Technical Spec](./FIN-005-technical.md) - Individual Balance Calculation
+- [FIN-002 Technical Spec](./FIN-002-expense-submission-api.md) - Expense Submission
+- [FIN-004 Technical Spec](./FIN-004-main-balance-calculation-api.md) - Main Balance Calculation
+- [FIN-005 Technical Spec](./FIN-005-individual-balance-calculation-api.md) - Individual Balance Calculation

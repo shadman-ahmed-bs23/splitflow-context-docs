@@ -244,5 +244,5 @@ function generateReport(Group $group, array $filters): array
 
 ## 9. Related Documentation
 
-- [RPT-002 Technical Spec](./RPT-002-technical.md) - Individual Balance Tracking
-- [FIN-001 Technical Spec](../financial-operations/FIN-001-technical.md) - Deposits
+- [RPT-002 Technical Spec](./RPT-002-individual-balance-tracking-api.md) - Individual Balance Tracking
+- [FIN-001 Technical Spec](../financial-operations/FIN-001-deposit-submission-api.md) - Deposits

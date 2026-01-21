@@ -215,5 +215,5 @@ function getBalanceOverTime(User $user, Group $group): array
 
 ## 9. Related Documentation
 
-- [FIN-005 Technical Spec](../financial-operations/FIN-005-technical.md) - Individual Balance
-- [RPT-001 Technical Spec](./RPT-001-technical.md) - Spending Reports
+- [FIN-005 Technical Spec](../financial-operations/FIN-005-individual-balance-calculation-api.md) - Individual Balance
+- [RPT-001 Technical Spec](./RPT-001-spending-reports-api.md) - Spending Reports
